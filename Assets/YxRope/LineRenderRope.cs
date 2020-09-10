@@ -272,11 +272,6 @@ namespace YxRope
                     TailHandler.position = _tail.transform.position;
                 }
             }
-            var oldHPos = HeadHandler.position;
-            var oldTPos = TailHandler.position;
-            _self.position = _head.transform.position;
-            HeadHandler.position = oldHPos;
-            TailHandler.position = oldTPos;
         }
 
         protected virtual void Update()
@@ -300,6 +295,12 @@ namespace YxRope
                     }
                 }
             }
+
+            var oldHPos = HeadHandler.position;
+            var oldTPos = TailHandler.position;
+            _self.position = _head.transform.position;
+            HeadHandler.position = oldHPos;
+            TailHandler.position = oldTPos;
         }
 
         /// <summary>
